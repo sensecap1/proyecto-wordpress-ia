@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: wp_ia_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: wp_ia
+      MYSQL_USER: wpuser
+      MYSQL_PASSWORD: wppass
+      MYSQL_ROOT_PASSWORD: rootpass
+    volumes:
+      - db_data:/var/lib/mysql
+
+  wordpress:
+    image: wordpress:php8.2-apache
+    container_name: wp_ia_app
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wpuser
+      WORDPRESS_DB_PASSWORD: wppass
+      WORDPRESS_DB_NAME: wp_ia
+    volumes:
+      - "D:/ROBERTO/GRADO CIBERSEGURIDAD Y REDES/2º Curso/Implantación de aplicaciones web/PROYECTO WORDPRESS IA/wp-content:/var/www/html/wp-content"
+    depends_on:
+      - db
+
+volumes:
+  db_data:

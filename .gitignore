@@ -1,0 +1,10 @@
+# Core de WordPress (no versionar)
+wordpress/
+
+# Cachés y temporales
+*.log
+*.tmp
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
