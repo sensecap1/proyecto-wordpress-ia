@@ -1,0 +1,106 @@
+/*
+Theme Name: IA Blog
+Author: Roberto
+Description: Tema WordPress personalizado para un blog divulgativo sobre Inteligencia Artificial.
+Version: 1.0
+*/
+
+/* ---------- RESET BÁSICO ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- BASE ---------- */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen;
+    background-color: #f4f6f8;
+    color: #1f2933;
+    line-height: 1.6;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    padding: 2.5rem 1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ---------- CONTENEDOR ---------- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem;
+}
+
+/* ---------- TARJETAS DE ENTRADAS ---------- */
+article {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+article h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #0f172a;
+}
+
+article p {
+    margin-bottom: 1rem;
+}
+
+/* ---------- IMÁGENES ---------- */
+article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+/* ---------- LISTAS ---------- */
+article ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+article li {
+    margin-bottom: 0.5rem;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    background: #0f172a;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* ---------- LINKS ---------- */
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+
