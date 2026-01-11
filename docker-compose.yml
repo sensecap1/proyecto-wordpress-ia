@@ -18,7 +18,14 @@ services:
     container_name: wp_ia_app
     ports:
       - "8080:80"
+    # Esta línea permite al plugin "verse a sí mismo" como localhost
+    extra_hosts:
+      - "localhost:host-gateway"
     environment:
+      # Forzamos a WordPress a saber que vive en el puerto 8080
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_HOME', 'http://localhost:8080');
+        define('WP_SITEURL', 'http://localhost:8080');
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_USER: wpuser
       WORDPRESS_DB_PASSWORD: wppass
